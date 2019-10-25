@@ -46,6 +46,9 @@ INPUT /home/daniknik/PycharmProjects/rip_labs/lab2/report/report_2.toc
 OUTPUT /home/daniknik/PycharmProjects/rip_labs/lab2/report/report_2.toc
 INPUT /home/daniknik/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm
 INPUT /home/daniknik/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx1200.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+INPUT /home/daniknik/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/latt1000.tfm
 INPUT /home/daniknik/PycharmProjects/rip_labs/lab2/report/report_2.aux
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb
@@ -54,3 +57,4 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb

@@ -62,7 +62,7 @@ gen\_random(1, 3, 5)должен выдать 5 чисел от 1 до 3, т.е.
 
 \subsection{Задача 4}
 Необходимо реализовать декоратор print\_result, который выводит на экран результат выполнения функции. Файл ex\_4.py не нужно изменять.
-Декоратор должен принимать на вход функцию, вызывать её, печатать в консоль имя функции, печатать результат и возвращать значение. 
+Декоратор должен принимать на вход функцию, вызывать её, печатать в консоль имя функции, печатать результат и возвращать значение.
 Если функция вернула список (list), то значения должны выводиться в столбик.
 Если функция вернула словарь (dict), то ключи и значения должны выводить в столбик через знак равно
 
@@ -81,6 +81,250 @@ gen\_random(1, 3, 5)должен выдать 5 чисел от 1 до 3, т.е.
     \item Функция f3 должна модифицировать каждый элемент массива, добавив строку “с опытом Python” (все программисты должны быть знакомы с Python). Для модификации используйте функцию map.
     \item Функция f4 должна сгенерировать для каждой специальности зарплату от 100 000 до 200 000 рублей и присоединить её к названию специальности. Используйте zip для обработки пары специальность — зарплата.
 \end{enumerate}
+\newpage
+\section{Исходные коды файлов}
+\subsection{librip/gens.py}
+\begin{verbatim}
+import random
 
+
+def field(val_list, *args):
+    assert len(args) > 0
+    for e in val_list:
+        d = {}
+        for a in args:
+            if (a in e.keys()) and (len(args) == 1):
+                yield e[a]
+            elif a in e is not None:
+                d[a] = e[a]
+        if len(d) > 0 and len(args) > 1:
+            yield d
+
+
+def gen_random(beg, end, count):
+    for i in range(count):
+        yield random.randint(beg, end)
+
+\end{verbatim}
+
+\subsection{librip/iterators.py}
+\begin{verbatim}
+    from typing import Union, Generator
+
+
+    class UniqueIterator:
+        class GenericItem:
+            def __init__(self, e):
+                self.value = e
+    
+            def __hash__(self):
+                return self.value.__hash__()
+    
+            def __eq__(self, other):
+                return self.value == other.value
+    
+        class StringItem(GenericItem):
+            def __init__(self, item: str, ignore_case: bool = False):
+                super().__init__(item)
+                self.ignore_case = ignore_case
+    
+            def __hash__(self) -> int:
+                key = self.value if not self.ignore_case else self.value.lower()
+                return key.__hash__()
+    
+            def __eq__(self, other) -> bool:
+                return self.value == other.value if not self.ignore_case else self.value.lower() == other.value.lower()
+    
+        def __init__(self, obj: Union[list, Generator], ignore_case: bool = False, **kwargs):
+            items = [
+                UniqueIterator.StringItem(e, ignore_case)
+                if isinstance(e, str)
+                else
+                UniqueIterator.GenericItem(e)
+                for e in obj
+            ]
+            self._unique_items = iter([e.value for e in set(items)])
+    
+        def __iter__(self):
+            return self
+    
+        def __next__(self):
+            return next(self._unique_items)
+    
+\end{verbatim}
+
+\subsection{librip/decorators.py}
+\begin{verbatim}
+import functools
+
+
+def print_result(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        print(func.__name__)
+        result = func(*args, **kwargs)
+        res_type = type(result)
+        if res_type is list:
+            for i in result:
+                print(i)
+        elif res_type is dict:
+            for i in result.items():
+                print(f'{i[0]}={i[1]}')
+        else:
+            print(result)
+        return result
+
+    return wrapper
+
+\end{verbatim}
+
+\subsection{librip/ctxmgr.py}
+\begin{verbatim}
+import time
+
+
+class timer:
+    def __init__(self):
+        self.start = 0
+
+    def __enter__(self):
+        self.start = time.time()
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print(f'Run for {time.time() - self.start}')
+\end{verbatim}
+
+\subsection{ex\_1.py}
+\begin{verbatim}
+from lab2.librip.gens import field, gen_random
+
+goods = [
+    {'title': 'Ковер', 'price': 2000, 'color': 'green'},
+    {'title': 'Диван для отдыха', 'price': 5300, 'color': 'black'},
+    {'title': 'Стелаж', 'price': 7000, 'color': 'white'},
+    {'title': 'Вешалка для одежды', 'price': 800, 'color': 'white'}
+]
+
+if __name__ == '__main__':
+    print([e for e in field(goods, "title")])
+    print([e for e in field(goods, "title", "price")])
+
+    print([a for a in gen_random(1, 3, 5)])
+
+\end{verbatim}
+\subsection{ex\_2.py}
+\begin{verbatim}
+    from lab2.librip.gens import gen_random
+    from lab2.librip.iterators import UniqueIterator
+    
+    data1 = ['1', '1', '1', '1', 1, 2, 2, 2, 2, 2]
+    data2 = gen_random(1, 3, 10)
+    
+    if __name__ == '__main__':
+        i1 = UniqueIterator(data1)
+        i2 = UniqueIterator(data2)
+    
+        print([e for e in i1])
+        print([e for e in i2])
+\end{verbatim}
+\subsection{ex\_3.py}
+\begin{verbatim}
+if __name__ == '__main__':
+data = [4, -30, 100, -100, 123, 1, 0, -1, -4]
+print(sorted(data, key=lambda x: abs(x)))
+\end{verbatim}
+\subsection{ex\_4.py}
+\begin{verbatim}
+    from lab2.librip.decorators import print_result
+
+
+    # Необходимо верно реализовать print_result
+    # и задание будет выполнено
+    
+    @print_result
+    def test_1():
+        return 1
+    
+    
+    @print_result
+    def test_2():
+        return 'iu'
+    
+    
+    @print_result
+    def test_3():
+        return {'a': 1, 'b': 2}
+    
+    
+    @print_result
+    def test_4():
+        return [1, 2]
+    
+    
+    if __name__ == '__main__':
+        test_1()
+        test_2()
+        test_3()
+        test_4()
+        
+\end{verbatim}
+\subsection{ex\_5.py}
+\begin{verbatim}
+    from time import sleep
+    from lab2.librip.ctxmgr import timer
+    
+    if __name__ == '__main__':
+        with timer():
+            sleep(5.5)    
+\end{verbatim}
+\subsection{ex\_6.py}
+\begin{verbatim}
+    import json
+    import sys
+    from lab2.librip.ctxmgr import timer
+    from lab2.librip.decorators import print_result
+    from lab2.librip.gens import field, gen_random
+    from lab2.librip.iterators import UniqueIterator as unique
+    
+    path = sys.argv[1]
+    
+    # Здесь необходимо в переменную path получить
+    # путь до файла, который был передан при запуске
+    
+    
+    # Далее необходимо реализовать все функции по заданию, заменив `raise NotImplemented`
+    # Важно!
+    # Функции с 1 по 3 дожны быть реализованы в одну строку
+    # В реализации функции 4 может быть до 3 строк
+    # При этом строки должны быть не длиннее 80 символов
+    
+    @print_result
+    def f1(arg):
+        return list(unique(field(arg, "job-name"), ignore_case=True))
+    
+    
+    @print_result
+    def f2(arg):
+        return list(filter(lambda s: "программист" in s, arg))
+    
+    
+    @print_result
+    def f3(arg):
+        return list(map(lambda s: f"{s} с опытом Python", arg))
+    
+    
+    @print_result
+    def f4(arg):
+        prof = gen_random(100000, 200000, len(arg))
+        return list(map(lambda s: f'{s[0]}, зарплата {s[1]} руб.', zip(arg, prof)))
+    
+    
+    if __name__ == '__main__':
+        with open(path) as f:
+            data = json.load(f)
+    
+        with timer():
+            f4(f3(f2(f1(data))))
+\end{verbatim}
 
 \end{document}
