@@ -9,6 +9,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
@@ -54,6 +56,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 INPUT /home/daniknik/rip_labs/lab2/report/report_2.aux
 INPUT /home/daniknik/rip_labs/lab2/report/report_2.aux
 OUTPUT /home/daniknik/rip_labs/lab2/report/report_2.aux
