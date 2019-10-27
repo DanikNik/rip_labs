@@ -1,4 +1,5 @@
-\babel@toc {english}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
 \contentsline {section}{\numberline {1}\IeC {\CYRZ }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrn }\IeC {\cyri }\IeC {\cyre }}{2}
 \contentsline {subsection}{\numberline {1.1}\IeC {\CYRZ }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra } 1}{2}
 \contentsline {subsection}{\numberline {1.2}\IeC {\CYRZ }\IeC {\cyra }\IeC {\cyrd }\IeC {\cyra }\IeC {\cyrch }\IeC {\cyra } 2}{2}

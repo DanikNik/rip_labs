@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.25)  27 OCT 2019 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.25)  27 OCT 2019 17:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/daniknik/rip_labs/lab2/report/report_2.tex
-(/home/daniknik/rip_labs/lab2/report/report_2.tex
+**/home/daniknik/rip_labs/lab3/report/report_3.tex
+(/home/daniknik/rip_labs/lab3/report/report_3.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -580,23 +580,23 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
-) (/home/daniknik/rip_labs/lab2/report/report_2.aux)
-\openout1 = `report_2.aux'.
+) (/home/daniknik/rip_labs/lab3/report/report_3.aux)
+\openout1 = `report_3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
@@ -652,68 +652,43 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/daniknik/rip_labs/lab2/report/report_2.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/daniknik/rip_labs/lab3/report/report_3.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 5.
 )
 \tf@toc=\write3
-\openout3 = `report_2.toc'.
+\openout3 = `report_3.toc'.
 
- [1] [2] [3]
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 89.
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+ [1]
+Overfull \hbox (21.24232pt too wide) in paragraph at lines 42--43
+[]\T2A/cmr/m/n/10 Все фай-лы про-ек-та (кро-ме ос-нов-но-го фай-ла main.py) долж-ны рас-по-ла-гать-ся в па-ке-те lab_python_oop. 
+ []
+
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 72.
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-) [4] [5] [6] [7] [8]
-<./graphics/ex1.png, id=37, 874.76813pt x 44.41594pt>
-File: ./graphics/ex1.png Graphic file (type png)
-<use ./graphics/ex1.png>
-Package pdftex.def Info: ./graphics/ex1.png  used on input line 327.
-(pdftex.def)             Requested size: 469.75502pt x 23.8514pt.
-<./graphics/ex2.png, id=39, 76.78688pt x 30.1125pt>
-File: ./graphics/ex2.png Graphic file (type png)
-<use ./graphics/ex2.png>
-Package pdftex.def Info: ./graphics/ex2.png  used on input line 334.
-(pdftex.def)             Requested size: 76.78668pt x 30.11241pt.
-<./graphics/ex3.png, id=40, 228.10219pt x 21.07875pt>
-File: ./graphics/ex3.png Graphic file (type png)
-<use ./graphics/ex3.png>
-Package pdftex.def Info: ./graphics/ex3.png  used on input line 341.
-(pdftex.def)             Requested size: 469.75502pt x 43.41107pt.
-<./graphics/ex4.png, id=41, 76.03406pt x 135.50626pt>
-File: ./graphics/ex4.png Graphic file (type png)
-<use ./graphics/ex4.png>
-Package pdftex.def Info: ./graphics/ex4.png  used on input line 348.
-(pdftex.def)             Requested size: 76.03386pt x 135.5059pt.
-<./graphics/ex5.png, id=42, 150.5625pt x 17.31468pt>
-File: ./graphics/ex5.png Graphic file (type png)
-<use ./graphics/ex5.png>
-Package pdftex.def Info: ./graphics/ex5.png  used on input line 355.
-(pdftex.def)             Requested size: 469.75502pt x 54.03262pt.
-<./graphics/ex6.png, id=43, 494.59781pt x 298.86656pt>
-File: ./graphics/ex6.png Graphic file (type png)
-<use ./graphics/ex6.png>
-Package pdftex.def Info: ./graphics/ex6.png  used on input line 361.
-(pdftex.def)             Requested size: 469.75502pt x 283.8532pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./graphics/ex1.png> <./graphics/ex2.png> <./graphics/ex3.png> <./graphics/ex4.png> <./graphics/ex5.png>] [10 <./graphics/ex6.png>] (/home/daniknik/rip_labs/lab2/report/report_2.aux) ) 
+) [2] [3] [4]
+<./graphics/result.png, id=24, 256.70906pt x 49.68562pt>
+File: ./graphics/result.png Graphic file (type png)
+<use ./graphics/result.png>
+Package pdftex.def Info: ./graphics/result.png  used on input line 177.
+(pdftex.def)             Requested size: 256.70842pt x 49.6855pt.
+ [5 <./graphics/result.png>] (/home/daniknik/rip_labs/lab3/report/report_3.aux) ) 
 Here is how much of TeX's memory you used:
- 3058 strings out of 492982
- 39294 string characters out of 6134895
- 104177 words of memory out of 5000000
- 6562 multiletter control sequences out of 15000+600000
+ 3028 strings out of 492982
+ 38761 string characters out of 6134895
+ 104136 words of memory out of 5000000
+ 6537 multiletter control sequences out of 15000+600000
  11197 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,25p,772b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,5n,25p,605b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /home/daniknik/rip_labs/lab2/report/report_2.pdf (11 pages, 231202 bytes).
+Output written on /home/daniknik/rip_labs/lab3/report/report_3.pdf (6 pages, 139199 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
